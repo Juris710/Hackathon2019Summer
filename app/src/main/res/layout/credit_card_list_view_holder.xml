@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/dragButtonLeft"
+        android:layout_width="21dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:foreground="@drawable/list_drag_button"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/simpleRecyclerContentText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/simple_recycler_view_drag_button_content_text_spacing"
+        android:layout_marginRight="@dimen/simple_recycler_view_drag_button_content_text_spacing"
+        android:background="@drawable/simple_recycler_view_ripple_effect"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="@dimen/simple_recycler_view_content_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dragButtonRight"
+        app:layout_constraintStart_toEndOf="@id/dragButtonLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/dragButtonRight"
+        android:layout_width="21dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:foreground="@drawable/list_drag_button"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

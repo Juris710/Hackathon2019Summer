@@ -1,2 +1,2 @@
-include ':app', ':juris710utilityfunctions'
+include ':app', ':juris710utilityfunctions', ':simplerecyclerview'
 rootProject.name='Hackathon2019Summer'
