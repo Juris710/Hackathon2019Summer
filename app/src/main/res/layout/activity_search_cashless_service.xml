@@ -17,4 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@android:color/white"/>
 
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_toolbar" />
+    
+
 </androidx.constraintlayout.widget.ConstraintLayout>
