@@ -1,0 +1,2 @@
+include ':app', ':juris710utilityfunctions'
+rootProject.name='Hackathon2019Summer'
