@@ -1,8 +1,9 @@
-package com.example.hackathon2019summer
+package com.example.hackathon2019summer.vat_relief
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_check_tax_rate_master.*
+import com.example.hackathon2019summer.R
+import com.example.hackathon2019summer.openImageFromAssets
 import kotlinx.android.synthetic.main.activity_result.*
 import kotlinx.android.synthetic.main.activity_result.activity_toolbar
 import java.lang.RuntimeException
@@ -23,7 +24,10 @@ class ResultActivity : AppCompatActivity() {
                 else -> throw RuntimeException("税率の値が不正です")
             }
             resultImage.setImageBitmap(
-                openImageFromAssets(this@ResultActivity, resultImagePath)
+                openImageFromAssets(
+                    this@ResultActivity,
+                    resultImagePath
+                )
             )
         }
 

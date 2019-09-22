@@ -1,9 +1,10 @@
-package com.example.hackathon2019summer
+package com.example.hackathon2019summer.cash_back
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hackathon2019summer.R
 import kotlinx.android.synthetic.main.activity_cash_back.*
 
 

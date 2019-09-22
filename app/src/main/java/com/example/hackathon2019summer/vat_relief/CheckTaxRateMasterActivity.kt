@@ -1,8 +1,10 @@
-package com.example.hackathon2019summer
+package com.example.hackathon2019summer.vat_relief
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hackathon2019summer.R
+import com.example.hackathon2019summer.openActivityOnClick
+import com.example.hackathon2019summer.openResultOnClick
 import kotlinx.android.synthetic.main.activity_check_tax_rate_master.*
 
 class CheckTaxRateMasterActivity : AppCompatActivity() {
@@ -18,9 +20,18 @@ class CheckTaxRateMasterActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
             title = "軽減税率"
         }
-        openActivityOnClick(mealButton, MealActivity::class.java)
-        openActivityOnClick(newsPaperButton, NewsPaperActivity::class.java)
-        openResultOnClick(othersButton, EXTRA_VALUE_STRING_TEN)
+        openActivityOnClick(
+            mealButton,
+            MealActivity::class.java
+        )
+        openActivityOnClick(
+            newsPaperButton,
+            NewsPaperActivity::class.java
+        )
+        openResultOnClick(
+            othersButton,
+            EXTRA_VALUE_STRING_TEN
+        )
     }
 
 

@@ -1,7 +1,10 @@
-package com.example.hackathon2019summer
+package com.example.hackathon2019summer.vat_relief
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.hackathon2019summer.R
+import com.example.hackathon2019summer.openActivityOnClick
+import com.example.hackathon2019summer.openResultOnClick
 import kotlinx.android.synthetic.main.activity_meal.*
 import kotlinx.android.synthetic.main.activity_result.activity_toolbar
 
@@ -12,9 +15,18 @@ class MealActivity : AppCompatActivity() {
         setContentView(R.layout.activity_meal)
 
 
-        openResultOnClick(foodButton, EXTRA_VALUE_STRING_EIGHT)
-        openActivityOnClick(beverageButton, WaterActivity::class.java)
-        openActivityOnClick(eatOutButton, EatOutActivity::class.java)
+        openResultOnClick(
+            foodButton,
+            EXTRA_VALUE_STRING_EIGHT
+        )
+        openActivityOnClick(
+            beverageButton,
+            WaterActivity::class.java
+        )
+        openActivityOnClick(
+            eatOutButton,
+            EatOutActivity::class.java
+        )
 
         setSupportActionBar(activity_toolbar)
         supportActionBar?.run{

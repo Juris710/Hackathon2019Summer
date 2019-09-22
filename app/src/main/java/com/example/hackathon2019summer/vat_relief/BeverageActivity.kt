@@ -1,14 +1,17 @@
-package com.example.hackathon2019summer
+package com.example.hackathon2019summer.vat_relief
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_water.*
+import com.example.hackathon2019summer.R
+import com.example.hackathon2019summer.openResultOnClick
+import kotlinx.android.synthetic.main.activity_beverage.*
+import kotlinx.android.synthetic.main.activity_result.activity_toolbar
 
-class WaterActivity : AppCompatActivity() {
+class BeverageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_water)
+        setContentView(R.layout.activity_beverage)
 
         setSupportActionBar(activity_toolbar)
         supportActionBar?.run{
@@ -16,10 +19,13 @@ class WaterActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
             title = "軽減税率"
         }
-        openResultOnClick(drinkWaterButton, EXTRA_VALUE_STRING_EIGHT)
-        openResultOnClick(dryIceButton, EXTRA_VALUE_STRING_TEN)
-        openResultOnClick(tapWaterButton, EXTRA_VALUE_STRING_TEN)
+
+        openResultOnClick(
+            othersButton,
+            EXTRA_VALUE_STRING_EIGHT
+        )
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return super.onSupportNavigateUp()
