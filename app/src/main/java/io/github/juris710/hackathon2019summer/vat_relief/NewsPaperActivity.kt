@@ -1,9 +1,9 @@
-package com.example.hackathon2019summer.vat_relief
+package io.github.juris710.hackathon2019summer.vat_relief
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.hackathon2019summer.R
-import com.example.hackathon2019summer.openResultOnClick
+import io.github.juris710.hackathon2019summer.R
+import io.github.juris710.hackathon2019summer.openResultOnClick
 import kotlinx.android.synthetic.main.activity_news_paper.*
 import kotlinx.android.synthetic.main.activity_result.activity_toolbar
 

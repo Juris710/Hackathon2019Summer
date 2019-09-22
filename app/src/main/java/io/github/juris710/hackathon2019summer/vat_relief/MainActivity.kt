@@ -1,10 +1,10 @@
-package com.example.hackathon2019summer.vat_relief
+package io.github.juris710.hackathon2019summer.vat_relief
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.hackathon2019summer.cash_back.CashBackActivity
-import com.example.hackathon2019summer.R
-import com.example.hackathon2019summer.openActivityOnClick
+import io.github.juris710.hackathon2019summer.cash_back.CashBackActivity
+import io.github.juris710.hackathon2019summer.R
+import io.github.juris710.hackathon2019summer.openActivityOnClick
 import kotlinx.android.synthetic.main.activity_main.*
 
 

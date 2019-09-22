@@ -1,4 +1,4 @@
-package com.example.hackathon2019summer.cash_back
+package io.github.juris710.hackathon2019summer.cash_back
 
 import android.content.Context
 import android.util.AttributeSet
@@ -13,7 +13,7 @@ class CreditCardListView @JvmOverloads constructor(
     override val contentClass = CreditCardData::class.java
     override val viewHolderClass = CreditCardListViewHolder::class.java
 
-    class Edito(
+    class Editor(
         activity: AppCompatActivity
     ): SimpleRecyclerView.AbstractEditor<CreditCardData, CreditCardListViewHolder, CreditCardListView>(activity)
 }

@@ -25,9 +25,23 @@
         android:layout_height="wrap_content"
         android:text="ポイント還元\n対象店舗を見る"
         android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkCashBackCashlessServiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_toolbar"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/checkCashBackCashlessServiceButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="対象キャッシュレス\nサービスを調べる"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activity_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/checkCashBackViaWebButton"
+        app:layout_constraintVertical_chainStyle="spread" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

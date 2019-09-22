@@ -1,4 +1,4 @@
-package com.example.hackathon2019summer.cash_back
+package io.github.juris710.hackathon2019summer.cash_back
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
-import com.example.hackathon2019summer.R
+import io.github.juris710.hackathon2019summer.R
 import java.lang.RuntimeException
 
 class CreditCartInfoDialog : DialogFragment(){

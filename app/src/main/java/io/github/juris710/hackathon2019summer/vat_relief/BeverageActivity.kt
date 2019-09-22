@@ -1,16 +1,17 @@
-package com.example.hackathon2019summer.vat_relief
+package io.github.juris710.hackathon2019summer.vat_relief
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.hackathon2019summer.R
-import com.example.hackathon2019summer.openImageFromAssets
-import kotlinx.android.synthetic.main.activity_tax_rate_image.*
+import io.github.juris710.hackathon2019summer.R
+import io.github.juris710.hackathon2019summer.openResultOnClick
+import kotlinx.android.synthetic.main.activity_beverage.*
+import kotlinx.android.synthetic.main.activity_result.activity_toolbar
 
-class TaxRateImageActivity : AppCompatActivity() {
+class BeverageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tax_rate_image)
+        setContentView(R.layout.activity_beverage)
 
         setSupportActionBar(activity_toolbar)
         supportActionBar?.run{
@@ -18,10 +19,13 @@ class TaxRateImageActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
             title = "軽減税率"
         }
-        taxRateImage.setImageBitmap(
-            openImageFromAssets(this, "taxRateImage.png")
+
+        openResultOnClick(
+            othersButton,
+            EXTRA_VALUE_STRING_EIGHT
         )
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return super.onSupportNavigateUp()
