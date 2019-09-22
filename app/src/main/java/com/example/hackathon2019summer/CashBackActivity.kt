@@ -1,24 +1,28 @@
 package com.example.hackathon2019summer
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_water.*
+import kotlinx.android.synthetic.main.activity_cash_back.*
 
-class WaterActivity : AppCompatActivity() {
+
+
+class CashBackActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_water)
-
+        setContentView(R.layout.activity_cash_back)
         setSupportActionBar(activity_toolbar)
         supportActionBar?.run{
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            title = "軽減税率"
+            title = "ポイント還元"
         }
-        openResultOnClick(drinkWaterButton, EXTRA_VALUE_STRING_EIGHT)
-        openResultOnClick(dryIceButton, EXTRA_VALUE_STRING_TEN)
-        openResultOnClick(tapWaterButton, EXTRA_VALUE_STRING_TEN)
+        checkCashBackViaWebButton.setOnClickListener {
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://map.cashless.go.jp/search"))
+            startActivity(i)
+        }
     }
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()

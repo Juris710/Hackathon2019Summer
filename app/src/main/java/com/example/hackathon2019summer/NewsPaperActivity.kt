@@ -18,7 +18,7 @@ class NewsPaperActivity : AppCompatActivity() {
         supportActionBar?.run{
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            setTitle(R.string.app_name)
+            title = "軽減税率"
         }
 
     }

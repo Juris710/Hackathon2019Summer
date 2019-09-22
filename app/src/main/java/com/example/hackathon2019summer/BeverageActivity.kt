@@ -16,7 +16,7 @@ class BeverageActivity : AppCompatActivity() {
         supportActionBar?.run{
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            setTitle(R.string.app_name)
+            title = "軽減税率"
         }
 
         openResultOnClick(othersButton, EXTRA_VALUE_STRING_EIGHT)

@@ -16,15 +16,11 @@ class CheckTaxRateMasterActivity : AppCompatActivity() {
         supportActionBar?.run{
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            setTitle(R.string.app_name)
+            title = "軽減税率"
         }
-
         openActivityOnClick(mealButton, MealActivity::class.java)
         openActivityOnClick(newsPaperButton, NewsPaperActivity::class.java)
         openResultOnClick(othersButton, EXTRA_VALUE_STRING_TEN)
-
-
-        //percentage_image.setImageBitmap(openImageFromAssets(this,"8_percent.png"))
     }
 
 
