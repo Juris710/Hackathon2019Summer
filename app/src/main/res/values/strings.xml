@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">App Name</string>
+    <string name="app_name">Tax Manager</string>
     <string name="button_text_check_tax_rate">8%? or 10%?</string>
 </resources>
