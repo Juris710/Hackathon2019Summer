@@ -21,7 +21,7 @@ class MealActivity : AppCompatActivity() {
         )
         openActivityOnClick(
             beverageButton,
-            WaterActivity::class.java
+            BeverageActivity::class.java
         )
         openActivityOnClick(
             eatOutButton,
