@@ -10,21 +10,11 @@ import java.lang.RuntimeException
 
 class SearchCashlessServiceActivity : AppCompatActivity() {
 
-    val creditCardList: List<CreditCardData> by lazy {
-/*
-        val s = openFromAssets(this, "credit_cards.xml")
-        System.out.println(s)
-*/
+    private val creditCardList: List<CreditCardData> by lazy {
         val root = parseStringToXML(openFromAssets(this, "credit_cards.xml"))
             ?: throw RuntimeException("XMLの形式が不正です")
-/*
-        val root = DocumentBuilderFactory.newInstance()
-            .newDocumentBuilder()
-            .parse(openFromAssets(this, "credit_cards.xml"))
-            .documentElement
-*/
         val list: MutableList<CreditCardData> = mutableListOf()
-        Log.d("DEBUG_PRINT", "${root.childNodes.toList()[0].nodeName} ${root.childNodes.length}")
+        //Log.d("DEBUG_PRINT", "${root.childNodes.toList()[0].nodeName} ${root.childNodes.length}")
         root.childNodes.item(0).childNodes.toList().mapNotNull{ card ->
             val cardDataList = card.childNodes.toList().toMap<Node, String, String>{
                it.nodeName to  it.textContent
@@ -44,23 +34,6 @@ class SearchCashlessServiceActivity : AppCompatActivity() {
             )
         }
         list
-/*
-        val cardNodeList = root.childNodes
-        for(i in 0 until cardNodeList.length){
-            val cardNode = cardNodeList.item(i)
-            if (cardNode !is Element){
-                continue
-            }
-            if(cardNode.nodeName != "card"){
-                continue
-            }
-            val cardDataNodeList = cardNode.childNodes
-            for(j in 0 until cardDataNodeList.length){
-
-            }
-        }
-*/
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,11 +46,30 @@ class SearchCashlessServiceActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
             title = "ポイント還元"
         }
-        CreditCardListView.Editor(this).create(R.id.creditCardList)
+        val creditCardListView = CreditCardListView.Editor(this).create(R.id.creditCardList)
             .setDividerEnabled(true)
             .setContents(creditCardList)
             .apply()
 
+        searchButton.setOnClickListener{
+            val searchText = searchBox.text.toString()
+            val searchResultList = creditCardList.filter{
+                it.category.contains(searchText,true) or
+                it.company.contains(searchText,true) or
+                it.name.contains(searchText,true)
+            }
+            searchResultList.forEach {
+                Log.d("DEBUG_PRINT","------------------------------------------------")
+                Log.d("DEBUG_PRINT","${it.category} -> ${it.category.contains(searchText, true)}")
+                Log.d("DEBUG_PRINT","${it.company} -> ${it.company.contains(searchText, true)}")
+                Log.d("DEBUG_PRINT","${it.name} -> ${it.name.contains(searchText, true)}")
+                Log.d("DEBUG_PRINT","------------------------------------------------")
+
+            }
+            CreditCardListView.Editor(this).edit(creditCardListView)
+                .setContents(searchResultList)
+                .apply()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

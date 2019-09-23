@@ -18,10 +18,11 @@
 
     <TextView
         android:id="@+id/cardNameValueText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_small"
         app:layout_constraintBottom_toBottomOf="@+id/cardNameTitleText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardNameTitleText"
         app:layout_constraintTop_toTopOf="@+id/cardNameTitleText" />
 
@@ -38,21 +39,23 @@
 
     <TextView
         android:id="@+id/companyNameValueText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/companyNameTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/cardNameValueText"
         app:layout_constraintTop_toTopOf="@+id/companyNameTitleTextView" />
 
     <TextView
         android:id="@+id/categoryValueText"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="@dimen/spacing_small"
+        android:text="ブランドプリペイド"
         android:textColor="@android:color/white"
-        android:textSize="36sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

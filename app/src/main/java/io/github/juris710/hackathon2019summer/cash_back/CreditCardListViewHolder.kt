@@ -27,9 +27,15 @@ class CreditCardListViewHolder(
             }.show(content.fragmentManager,"CreditCardInfoDialog")
             true
         }
+        hostView.findViewById<View>(R.id.viewHolderForeground).run{
+            bringToFront()
+            setOnLongClickListener(onLongClick)
+        }
+/*
         contentBackground.setOnLongClickListener(onLongClick)
         hostView.findViewById<View>(R.id.cardNameText).setOnLongClickListener(onLongClick)
         hostView.findViewById<View>(R.id.companyNameText).setOnLongClickListener(onLongClick)
         hostView.findViewById<View>(R.id.categoryText).setOnLongClickListener(onLongClick)
+*/
     }
 }
