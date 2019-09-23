@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vat_relief.ResultActivity">
+    tools:context=".cash_back.SearchCashbackActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/activity_toolbar"
         android:layout_width="match_parent"
@@ -15,32 +15,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@android:color/white" />
-
-    <ImageView
-        android:id="@+id/resultImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@id/backToTopButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/activity_toolbar"
-        app:srcCompat="@android:color/background_light" />
+        app:titleTextColor="@android:color/white"/>
 
     <Button
-        android:id="@+id/backToTopButton"
+        android:id="@+id/searchCreditButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="トップに戻る"
+        android:text="クレジットカード\nを探す"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@id/searchServiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_toolbar"
+        app:layout_constraintVertical_chainStyle="spread" />
+    <Button
+        android:id="@+id/searchServiceButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="他のサービスを探す"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintTop_toBottomOf="@+id/searchCreditButton"
+        app:layout_constraintVertical_chainStyle="spread"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,5 +8,6 @@ data class CreditCardData(
     val name: String,
     val category: String,
     val brand: String,
-    val fragmentManager: FragmentManager
+    val fragmentManager: FragmentManager,
+    val isCreditCard: Boolean
 )

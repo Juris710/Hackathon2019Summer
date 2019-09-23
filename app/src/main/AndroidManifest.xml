@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".cash_back.SearchCashlessServiceActivity"/>
+        <activity android:name=".cash_back.SearchCashbackActivity"/>
+        <activity android:name=".cash_back.SearchCreditCardActivity" />
         <activity android:name=".cash_back.CashBackActivity" />
         <activity android:name=".vat_relief.VATReliefActivity" />
         <activity android:name=".vat_relief.TaxRateImageActivity" />
@@ -23,7 +25,7 @@
         <activity android:name=".vat_relief.NewsPaperActivity" />
         <activity android:name=".vat_relief.ResultActivity" />
         <activity android:name=".vat_relief.CheckTaxRateMasterActivity" />
-        <activity android:name=".vat_relief.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

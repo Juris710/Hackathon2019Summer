@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import io.github.juris710.hackathon2019summer.R
+import kotlinx.android.synthetic.main.credit_card_info_dialog.*
 import java.lang.RuntimeException
 
 class CreditCartInfoDialog : DialogFragment(){
@@ -22,17 +23,22 @@ class CreditCartInfoDialog : DialogFragment(){
             inflated.findViewById<TextView>(R.id.cardNameValueText).text = it.name
             inflated.findViewById<TextView>(R.id.companyNameValueText).text = it.company
             inflated.findViewById<TextView>(R.id.categoryValueText).text = it.category
-            if(it.brand.contains("visa",true)){
-                inflated.findViewById<ImageView>(R.id.visaLogoImage).visibility = View.INVISIBLE
-            }
-            if(it.brand.contains("mastercard",true)){
-                inflated.findViewById<ImageView>(R.id.mastercardLogoImage).visibility = View.INVISIBLE
-            }
-            if(it.brand.contains("jcb",true)){
-                inflated.findViewById<ImageView>(R.id.jcbLogoImage).visibility = View.INVISIBLE
-            }
-            if(it.brand.contains("american express",true)){
-                inflated.findViewById<ImageView>(R.id.americanExpressLogoImage).visibility = View.INVISIBLE
+            if(it.isCreditCard){
+                if(it.brand.contains("visa",true)){
+                    inflated.findViewById<ImageView>(R.id.visaLogoImage).visibility = View.VISIBLE
+                }
+                if(it.brand.contains("mastercard",true)){
+                    inflated.findViewById<ImageView>(R.id.mastercardLogoImage).visibility = View.VISIBLE
+                }
+                if(it.brand.contains("jcb",true)){
+                    inflated.findViewById<ImageView>(R.id.jcbLogoImage).visibility = View.VISIBLE
+                }
+                if(it.brand.contains("american express",true)){
+                    inflated.findViewById<ImageView>(R.id.americanExpressLogoImage).visibility = View.VISIBLE
+                }
+            }else{
+                inflated.findViewById<TextView>(R.id.cashlessBrandNameTitleText).text = "ブランド"
+                inflated.findViewById<TextView>(R.id.cashlessBrandNameValueText).text = it.brand
             }
         }?: throw RuntimeException("データが存在しません")
     }

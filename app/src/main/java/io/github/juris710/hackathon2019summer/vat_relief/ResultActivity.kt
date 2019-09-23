@@ -1,7 +1,9 @@
 package io.github.juris710.hackathon2019summer.vat_relief
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.github.juris710.hackathon2019summer.MainActivity
 import io.github.juris710.hackathon2019summer.R
 import io.github.juris710.hackathon2019summer.openImageFromAssets
 import kotlinx.android.synthetic.main.activity_result.*
@@ -29,6 +31,12 @@ class ResultActivity : AppCompatActivity() {
                     resultImagePath
                 )
             )
+        }
+        backToTopButton.setOnClickListener {
+            val i = Intent(this, MainActivity::class.java)
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(i)
+            finish()
         }
 
         setSupportActionBar(activity_toolbar)
