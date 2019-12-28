@@ -31,11 +31,5 @@ class CreditCardListViewHolder(
             bringToFront()
             setOnLongClickListener(onLongClick)
         }
-/*
-        contentBackground.setOnLongClickListener(onLongClick)
-        hostView.findViewById<View>(R.id.cardNameText).setOnLongClickListener(onLongClick)
-        hostView.findViewById<View>(R.id.companyNameText).setOnLongClickListener(onLongClick)
-        hostView.findViewById<View>(R.id.categoryText).setOnLongClickListener(onLongClick)
-*/
     }
 }

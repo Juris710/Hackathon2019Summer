@@ -13,7 +13,6 @@ class SearchCreditCardActivity : AppCompatActivity() {
         val root = parseStringToXML(openFromAssets(this, "credit_cards.xml"))
             ?: throw RuntimeException("XMLの形式が不正です")
         val list: MutableList<CreditCardData> = mutableListOf()
-        //Log.d("DEBUG_PRINT", "${root.childNodes.toList()[0].nodeName} ${root.childNodes.length}")
         root.childNodes.item(0).childNodes.toList().mapNotNull{ card ->
             val cardDataList = card.childNodes.toList().toMap<Node, String, String>{
                it.nodeName to  it.textContent

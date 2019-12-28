@@ -6,9 +6,6 @@
     android:layout_height="wrap_content"
     android:background="@drawable/simple_recycler_view_ripple_effect">
 
-    <!--
-    TODO：全体を覆うConstraintLayoutを作って、それにRippleを入れてOnLongClickListenerをセットする
-    -->
     <View
         android:id="@+id/dragButtonLeft"
         android:layout_width="21dp"
